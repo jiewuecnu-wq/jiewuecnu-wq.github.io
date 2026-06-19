@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Entity linking for AI agents should be treated as decision grounding, not only ID resolution."
+    >
+    <meta property="og:title" content="Entity Linking for AI Agents | Jie Wu">
+    <meta
+      property="og:description"
+      content="Why entity linking for agents is different from entity linking for search and KBQA."
+    >
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="../assets/hero-ai.png">
+    <title>Entity Linking for AI Agents | Jie Wu</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body class="article-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header is-scrolled" data-header>
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="../index.html" aria-label="Back to homepage">
+          <span class="brand-mark" aria-hidden="true">JW</span>
+          <span class="brand-text">Jie Wu</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span class="sr-only">Open navigation</span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#work">Work</a>
+          <a href="../index.html#stack">Stack</a>
+          <a href="../index.html#notes">Notes</a>
+          <a href="../index.html#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <article class="article">
+        <header class="article-hero">
+          <a class="back-link" href="../index.html#notes">Back to notes</a>
+          <p class="section-kicker">Research Note</p>
+          <h1>Entity Linking for AI Agents</h1>
+          <p class="article-subtitle">
+            In traditional search and KBQA systems, entity linking is mostly about mapping mentions
+            to IDs. For AI agents, the more important job is grounding decisions.
+          </p>
+          <div class="article-meta">
+            <span>Jie Wu</span>
+            <span>AI Agents</span>
+            <span>Entity Linking</span>
+          </div>
+        </header>
+
+        <div class="article-body">
+          <p>
+            Entity linking has a long history in search, knowledge-base question answering, and
+            industrial recommendation systems. The classic operational framing is simple: given a
+            mention in a query or document, map it to a canonical entity ID. Once the ID is known,
+            downstream modules can fetch attributes, retrieve documents, expand the query, rank
+            results, or join with structured data.
+          </p>
+
+          <p>
+            That framing still matters. But for AI agents, it is incomplete. An agent is not only
+            asking, “Which ID does this mention refer to?” It is asking, “What does this thing mean
+            in the current task, what type of object is it, what tools should I call, and what
+            information do I need before acting?”
+          </p>
+
+          <h2>Traditional Entity Linking: Stable Keys for Pipelines</h2>
+          <p>
+            In a traditional industrial pipeline, entity linking is often optimized around head
+            entities. These are high-frequency, high-value, well-known entities: popular products,
+            organizations, people, locations, repositories, teams, or content items. The system wants
+            to map these mentions to stable entity IDs as accurately and cheaply as possible.
+          </p>
+
+          <p>
+            In a web search engine such as Bing, a linked entity can become the key that later
+            services use to fetch a knowledge card, traverse knowledge-graph relationships, retrieve
+            entity attributes, or generate ranking and presentation features. The entity ID is not the
+            final answer by itself. It is the handle that lets the rest of the search stack reliably
+            access structured knowledge.
+          </p>
+
+          <p>
+            In KBQA, the pattern is similar. The mention in the user question is linked to an entity
+            node in the knowledge graph. A downstream semantic parser or query builder can then use
+            that entity ID to construct a graph query, select candidate relations, constrain answer
+            types, and execute the query against the graph.
+          </p>
+
+          <p>
+            Recommendation, ads, and content-understanding systems often use entity IDs in a similar
+            way. Once an item, topic, brand, location, person, or organization is linked, the ID can
+            feed candidate generation, feature extraction, aggregation, personalization, policy
+            rules, and analytics joins.
+          </p>
+
+          <p>
+            Of course, traditional systems also use type, context, popularity priors, NIL detection,
+            and disambiguation signals. The point is not that they ignore context. The point is that
+            their primary contract is often to produce a stable key for downstream modules. In this
+            world, entity linking acts like a router: the mention is converted into an ID, and the ID
+            becomes the handle that the rest of the system understands.
+          </p>
+
+          <h2>Agentic Entity Linking: Context for Decisions</h2>
+          <p>
+            AI agents change the value of entity linking. An agent often has access to search tools,
+            databases, APIs, documents, memory, and reasoning steps. If the entity is a very obvious
+            head entity, the agent may still recover it through other means even without a dedicated
+            entity-linking module.
+          </p>
+
+          <p>
+            The harder problem is not always linking the most popular entities. The harder problem is
+            helping the agent understand the query early enough to choose the right path.
+          </p>
+
+          <p>
+            For an agent, entity linking should return more than an ID. It should expose useful
+            context: entity type, canonical name, aliases, ownership, relationships, confidence,
+            source, and task-relevant attributes. This information helps the agent decide whether it
+            is dealing with a product, a project, a team, a customer, a document, a metric, a service,
+            or something else entirely.
+          </p>
+
+          <p>
+            One way to describe this is an <strong>entity card</strong>: a compact,
+            permission-aware representation that gives the agent enough grounding to choose its next
+            action. The card may include the canonical ID, but it should not stop there.
+          </p>
+
+          <h2>The Value Moves Beyond Head Entities</h2>
+          <p>
+            Head entities are still important. If an agent links a major product, customer, service,
+            or team incorrectly, the task can fail in a very visible way. The difference is that
+            agents also make body and tail entities much more valuable to link.
+          </p>
+
+          <p>
+            In traditional search, a head entity often dominates because it receives many queries and
+            directly affects ranking quality. In agentic workflows, body and tail entities can create
+            comparable leverage because the agent has to spend real work to recover them: extra
+            searches, extra tool calls, broader retrieval, repeated alias expansion, and more
+            opportunities to choose the wrong branch.
+          </p>
+
+          <p>
+            So the question is not whether head entities matter less. They matter. The question is
+            where entity linking saves the most exploration cost. Often, the answer is the long tail
+            of internal projects, teams, services, metrics, repositories, and planning labels that
+            are obvious to some humans but expensive for an agent to rediscover from scratch.
+          </p>
+
+          <h2>A Simple Example: “Summarize My Work on OMS”</h2>
+          <p>
+            Consider a user asking: “Summarize my work on OMS.”
+          </p>
+
+          <p>
+            If the agent does not know what “OMS” is, the task becomes ambiguous. Is OMS a product?
+            A project? A team? A service? A customer? An internal document collection? A planning
+            label? Each interpretation implies different tools and different retrieval strategies.
+          </p>
+
+          <p>
+            Without entity understanding, the agent may call many tools: search documents, inspect
+            project trackers, query team directories, look through repositories, scan messages, and
+            iterate over possible meanings. This can increase latency, increase cost, and still
+            produce a lower-quality answer if the agent chooses the wrong branch early.
+          </p>
+
+          <p>
+            The bad trajectory may look like this: search for “OMS,” retrieve unrelated documents,
+            try several aliases, inspect project trackers, check team directories, then finally infer
+            what the user meant. Even if the agent eventually succeeds, the path is long and fragile.
+          </p>
+
+          <p>
+            With good entity linking, the agent can quickly learn that OMS is, for example, a product
+            or project entity, with known aliases, ownership, related documents, and relevant work
+            artifacts. The task is now grounded. The agent can select the right tools, retrieve the
+            right sources, and summarize the right work.
+          </p>
+
+          <h2>From ID Resolution to Decision Grounding</h2>
+          <p>
+            The central shift is this: for AI agents, entity linking should be treated as a query
+            understanding tool, not merely an ID-mapping tool.
+          </p>
+
+          <p>
+            A useful agent-oriented entity-linking result should answer several questions:
+          </p>
+
+          <ul>
+            <li>What entity or entities might the user be referring to?</li>
+            <li>What type is each entity?</li>
+            <li>How confident is the system?</li>
+            <li>Which aliases or surface forms support the match?</li>
+            <li>What relationships or metadata are relevant to the current task?</li>
+            <li>Which tools or retrieval sources should the agent consider next?</li>
+          </ul>
+
+          <p>
+            The best output is not always a single ID. Sometimes it is a ranked set of candidates
+            with enough semantic context for the agent to make a safe next move. Sometimes it is an
+            abstention that tells the agent to ask a clarification question instead of guessing.
+          </p>
+
+          <p>
+            This does not mean entity linking should become the entire planner. A cleaner boundary is:
+            entity linking grounds the objects in the user request; the agent planner decides what to
+            do with those grounded objects. The interface between them is the entity card.
+          </p>
+
+          <h2>Design Implications</h2>
+          <p>
+            This perspective changes how we should evaluate entity linking for agents.
+          </p>
+
+          <p>
+            Classic metrics such as precision, recall, and top-k accuracy are still useful, but they
+            do not fully capture agent value. We should also measure whether entity linking reduces
+            tool calls, lowers latency, improves task success, prevents wrong-tool selection, and
+            increases answer faithfulness.
+          </p>
+
+          <p>
+            A practical evaluation can be simple: run the same agent on the same task set with and
+            without entity cards. Compare task success rate, number of tool calls, end-to-end latency,
+            clarification rate, wrong-tool rate, and whether the final answer cites the right source
+            entities. This measures the thing agents actually care about: whether early grounding
+            improves the trajectory.
+          </p>
+
+          <p>
+            A small amount of entity context can have a large effect on an agent’s trajectory. If the
+            agent understands the type and meaning of the key entity at the start, it can plan better.
+            If it starts with the wrong interpretation, every later step may become more expensive to
+            repair.
+          </p>
+
+          <h2>Conclusion</h2>
+          <p>
+            Entity linking for search and KBQA is often about finding the right key for downstream
+            systems. Entity linking for AI agents is about grounding the agent’s interpretation of a
+            task.
+          </p>
+
+          <p>
+            The ID still matters. But the more valuable output is the context that helps the agent
+            decide: what is this entity, why does it matter, and what should I do next?
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; <span data-year></span> Jie Wu. Built for GitHub Pages.</p>
+      <a href="../index.html#notes">Back to notes</a>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
