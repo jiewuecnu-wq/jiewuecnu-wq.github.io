@@ -5,17 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Jie Wu's personal website for AI algorithms, machine learning systems, and research notes."
+      content="Jie Wu's personal website for search, query understanding, entity linking, knowledge graphs, and AI agents."
     >
-    <meta property="og:title" content="Jie Wu | AI Algorithms">
+    <meta property="og:title" content="Jie Wu">
     <meta
       property="og:description"
-      content="AI algorithms, model evaluation, retrieval systems, and research-driven engineering."
+      content="Search, query understanding, entity linking, knowledge graphs, and AI agents."
     >
     <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/hero-ai.png">
-    <title>Jie Wu | AI Algorithms</title>
-    <link rel="preload" href="assets/hero-ai.png" as="image">
+    <title>Jie Wu</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -23,10 +21,7 @@
 
     <header class="site-header" data-header>
       <nav class="nav" aria-label="Primary navigation">
-        <a class="brand" href="#top" aria-label="Back to homepage">
-          <span class="brand-mark" aria-hidden="true">JW</span>
-          <span class="brand-text">Jie Wu</span>
-        </a>
+        <a class="brand" href="#top" aria-label="Back to homepage">Jie Wu</a>
 
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
           <span class="sr-only">Open navigation</span>
@@ -36,276 +31,132 @@
         </button>
 
         <div class="nav-links" id="nav-links">
-          <a href="#about">About</a>
-          <a href="#work">Work</a>
+          <a href="#research">Research</a>
+          <a href="#articles">Articles</a>
           <a href="#publications">Publications</a>
-          <a href="#stack">Stack</a>
-          <a href="#notes">Notes</a>
-          <a href="#contact">Contact</a>
+          <a href="#links">Links</a>
         </div>
       </nav>
     </header>
 
-    <main id="main">
-      <section class="hero" id="top" aria-labelledby="hero-title">
-        <img class="hero-image" src="assets/hero-ai.png" alt="Abstract neural network and tensor-grid visualization">
-        <div class="hero-scrim" aria-hidden="true"></div>
-        <div class="hero-grid" aria-hidden="true"></div>
-
-        <div class="hero-content">
-          <p class="eyebrow">AI Algorithms & Learning Systems</p>
-          <h1 id="hero-title">Jie Wu</h1>
-          <p class="hero-copy">
-            I build algorithmic systems that turn noisy data into reliable decisions:
-            retrieval, evaluation, model diagnostics, and human-centered AI workflows.
-          </p>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#work">Explore Work</a>
-            <a class="button secondary" href="https://scholar.google.ca/citations?user=ukg-yzsAAAAJ">Google Scholar</a>
-          </div>
-          <dl class="hero-stats" aria-label="Profile summary">
-            <div>
-              <dt>Focus</dt>
-              <dd>Query Understanding</dd>
-            </div>
-            <div>
-              <dt>Methods</dt>
-              <dd>EL · RAG · Agents</dd>
-            </div>
-            <div>
-              <dt>Profile</dt>
-              <dd>Microsoft MAI Search</dd>
-            </div>
-          </dl>
+    <main class="page" id="main">
+      <section class="intro" id="top" aria-labelledby="intro-title">
+        <p class="eyebrow">Search · Knowledge Graphs · AI Agents</p>
+        <h1 id="intro-title">Jie Wu</h1>
+        <p class="lede">
+          I work on search and query understanding systems, with a focus on entity linking,
+          knowledge graphs, question answering, retrieval-augmented models, and agentic AI.
+        </p>
+        <p class="affiliation">Microsoft MAI Search & Distribution - CoreSearch</p>
+        <div class="link-row" aria-label="Profile links">
+          <a href="https://scholar.google.ca/citations?user=ukg-yzsAAAAJ">Google Scholar</a>
+          <a href="https://www.linkedin.com/in/jiewu-ecnu/">LinkedIn</a>
+          <a href="https://github.com/jiewuecnu-wq">GitHub</a>
         </div>
       </section>
 
-      <section class="section intro-band" id="about" aria-labelledby="about-title">
-        <div class="section-inner two-column">
-          <div>
-            <p class="section-kicker">About</p>
-            <h2 id="about-title">Algorithms should be measurable, inspectable, and useful in the loop.</h2>
-          </div>
-          <div class="prose">
+      <section class="section" id="research" aria-labelledby="research-title">
+        <h2 id="research-title">Research</h2>
+        <p>
+          My recent interests are around how language models understand entities, retrieve
+          evidence, use knowledge, and make reliable decisions in agentic workflows.
+        </p>
+        <ul class="tag-list" aria-label="Research topics">
+          <li>Entity Linking</li>
+          <li>Query Understanding</li>
+          <li>Web Search</li>
+          <li>Knowledge Graph</li>
+          <li>Question Answering</li>
+          <li>Retrieval-Augmented Generation</li>
+          <li>AI Agents</li>
+          <li>Copilot</li>
+        </ul>
+      </section>
+
+      <section class="section" id="articles" aria-labelledby="articles-title">
+        <div class="section-heading">
+          <h2 id="articles-title">Articles</h2>
+          <a href="articles/entity-linking-for-ai-agents.html">Latest article</a>
+        </div>
+
+        <div class="note-list">
+          <a class="note-item" href="articles/entity-linking-for-ai-agents.html">
+            <span>Article</span>
+            <strong>Entity Linking for AI Agents</strong>
             <p>
-              I work on search, query understanding, knowledge graphs, entity linking, question
-              answering, and agentic AI systems. My sweet spot is turning a promising model behavior
-              into a system that can be evaluated, debugged, shipped, and improved.
+              Why the goal of entity linking changes from stable keys for pipelines to
+              contextual grounding for agent decisions.
             </p>
-            <p>
-              This site is structured as an AI-focused portfolio: selected algorithmic projects,
-              technical interests, and notes on building trustworthy learning systems.
-            </p>
+          </a>
+          <div class="note-item muted">
+            <span>Draft</span>
+            <strong>Evaluating retrieval systems beyond top-k recall</strong>
+            <p>Measuring retrieval quality when the downstream system is generative.</p>
+          </div>
+          <div class="note-item muted">
+            <span>Draft</span>
+            <strong>What agent traces reveal about planning quality</strong>
+            <p>How tool paths, retries, and wrong branches expose weaknesses in agent planning.</p>
           </div>
         </div>
       </section>
 
-      <section class="section" id="work" aria-labelledby="work-title">
-        <div class="section-inner">
-          <div class="section-heading">
-            <div>
-              <p class="section-kicker">Selected Work</p>
-              <h2 id="work-title">Algorithmic projects</h2>
-            </div>
-            <a class="text-link" href="https://github.com/jwu10">View GitHub</a>
-          </div>
-
-          <div class="project-grid">
-            <article class="project-card">
-              <div class="project-meta">
-                <span>01</span>
-                <span>Retrieval</span>
-              </div>
-              <h3>Adaptive retrieval evaluator</h3>
-              <p>
-                A benchmark harness for measuring recall quality, citation grounding,
-                latency, and failure modes across retrieval-augmented generation pipelines.
-              </p>
-              <a href="#" aria-label="Open adaptive retrieval evaluator project">Project brief</a>
-            </article>
-
-            <article class="project-card accent">
-              <div class="project-meta">
-                <span>02</span>
-                <span>Agents</span>
-              </div>
-              <h3>Multi-agent planning lab</h3>
-              <p>
-                Experiments for decomposing ambiguous goals, comparing planner traces,
-                and scoring whether autonomous steps actually reduce task uncertainty.
-              </p>
-              <a href="#" aria-label="Open multi-agent planning lab project">Project brief</a>
-            </article>
-
-            <article class="project-card dark">
-              <div class="project-meta">
-                <span>03</span>
-                <span>Diagnostics</span>
-              </div>
-              <h3>Model behavior toolkit</h3>
-              <p>
-                Lightweight dashboards for drift checks, prompt regression tests,
-                confidence buckets, and human review queues.
-              </p>
-              <a href="#" aria-label="Open model behavior toolkit project">Project brief</a>
-            </article>
-          </div>
+      <section class="section" id="publications" aria-labelledby="publications-title">
+        <div class="section-heading">
+          <h2 id="publications-title">Selected Publications</h2>
+          <a href="https://scholar.google.ca/citations?user=ukg-yzsAAAAJ">All on Scholar</a>
         </div>
-      </section>
 
-      <section class="section publications-band" id="publications" aria-labelledby="publications-title">
-        <div class="section-inner">
-          <div class="section-heading">
-            <div>
-              <p class="section-kicker">Academic Profile</p>
-              <h2 id="publications-title">Research and publications</h2>
-            </div>
-            <div class="profile-links" aria-label="Academic profile links">
-              <a class="text-link" href="https://scholar.google.ca/citations?user=ukg-yzsAAAAJ">Google Scholar</a>
-              <a class="text-link" href="https://www.linkedin.com/in/jiewu-ecnu/">LinkedIn</a>
-            </div>
-          </div>
-
-          <div class="research-profile">
-            <div class="profile-panel">
-              <span class="profile-label">Affiliation</span>
-              <h3>Microsoft MAI Search & Distribution - CoreSearch</h3>
-              <p>
-                Research interests across Copilot, question answering, web search, knowledge graphs,
-                and query understanding.
-              </p>
-            </div>
-            <div class="topic-cloud" aria-label="Research topics">
-              <span>Copilot</span>
-              <span>Question Answering</span>
-              <span>Web Search</span>
-              <span>Knowledge Graph</span>
-              <span>Query Understanding</span>
-              <span>Entity Linking</span>
-              <span>RAG</span>
-              <span>AI Agents</span>
-            </div>
-          </div>
-
-          <div class="publication-list" aria-label="Selected publications">
-            <article class="publication-item">
-              <div>
-                <h3>Instructed language models with retrievers are powerful entity linkers</h3>
-                <p>Z. Xiao, M. Gong, J. Wu, X. Zhang, L. Shou, D. Jiang</p>
-                <span>EMNLP 2023</span>
-              </div>
-              <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:UebtZRa9Y70C">View</a>
-            </article>
-
-            <article class="publication-item">
-              <div>
-                <h3>Grounding language models for visual entity recognition</h3>
-                <p>Z. Xiao, M. Gong, P. Cascante-Bonilla, X. Zhang, J. Wu, V. Ordonez</p>
-                <span>ECCV 2024</span>
-              </div>
-              <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:mVmsd5A6BfQC">View</a>
-            </article>
-
-            <article class="publication-item">
-              <div>
-                <h3>Quantifying the robustness of retrieval-augmented language models against spurious features in grounding data</h3>
-                <p>S. Yang, J. Wu, W. Ding, N. Wu, S. Liang, M. Gong, H. Zhang, D. Zhang</p>
-                <span>arXiv 2025</span>
-              </div>
-              <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:roLk4NBRz8UC">View</a>
-            </article>
-
-            <article class="publication-item">
-              <div>
-                <h3>Coherent entity disambiguation via modeling topic and categorical dependency</h3>
-                <p>Z. Xiao, L. Shou, X. Zhang, J. Wu, M. Gong, D. Jiang</p>
-                <span>Findings of EMNLP 2023</span>
-              </div>
-              <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:Se3iqnhoufwC">View</a>
-            </article>
-
-            <article class="publication-item">
-              <div>
-                <h3>Policy-Invisible Violations in LLM-Based Agents</h3>
-                <p>J. Wu, M. Gong</p>
-                <span>arXiv 2026</span>
-              </div>
-              <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:9ZlFYXVOiuMC">View</a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section stack-band" id="stack" aria-labelledby="stack-title">
-        <div class="section-inner">
-          <div class="section-heading">
-            <div>
-              <p class="section-kicker">Technical Stack</p>
-              <h2 id="stack-title">Signals I care about</h2>
-            </div>
-          </div>
-
-          <div class="signal-grid">
-            <article class="signal-card">
-              <span>Representation</span>
-              <p>Embeddings, semantic search, reranking, clustering, and feature attribution.</p>
-            </article>
-            <article class="signal-card">
-              <span>Evaluation</span>
-              <p>Offline suites, adversarial cases, rubric design, and longitudinal monitoring.</p>
-            </article>
-            <article class="signal-card">
-              <span>Reliability</span>
-              <p>Guardrails, uncertainty estimates, model traces, and production feedback loops.</p>
-            </article>
-            <article class="signal-card">
-              <span>Interfaces</span>
-              <p>AI tools that reveal state, support correction, and keep humans in control.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="notes" aria-labelledby="notes-title">
-        <div class="section-inner">
-          <div class="section-heading">
-            <div>
-              <p class="section-kicker">Research Notes</p>
-              <h2 id="notes-title">Writing in progress</h2>
-            </div>
-          </div>
-
-          <div class="writing-list">
-            <a class="writing-item" href="articles/entity-linking-for-ai-agents.html">
-              <span>Entity Linking for AI Agents</span>
-              <small>Agents</small>
+        <ol class="publication-list">
+          <li>
+            <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:UebtZRa9Y70C">
+              Instructed language models with retrievers are powerful entity linkers
             </a>
-            <a class="writing-item" href="#">
-              <span>Evaluating retrieval systems beyond top-k recall</span>
-              <small>Evaluation</small>
+            <span>Z. Xiao, M. Gong, J. Wu, X. Zhang, L. Shou, D. Jiang. EMNLP 2023.</span>
+          </li>
+          <li>
+            <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:mVmsd5A6BfQC">
+              Grounding language models for visual entity recognition
             </a>
-            <a class="writing-item" href="#">
-              <span>What agent traces reveal about planning quality</span>
-              <small>Planning</small>
+            <span>Z. Xiao, M. Gong, P. Cascante-Bonilla, X. Zhang, J. Wu, V. Ordonez. ECCV 2024.</span>
+          </li>
+          <li>
+            <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:roLk4NBRz8UC">
+              Quantifying the robustness of retrieval-augmented language models against spurious features in grounding data
             </a>
-          </div>
-        </div>
+            <span>S. Yang, J. Wu, W. Ding, N. Wu, S. Liang, M. Gong, H. Zhang, D. Zhang. arXiv 2025.</span>
+          </li>
+          <li>
+            <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:Se3iqnhoufwC">
+              Coherent entity disambiguation via modeling topic and categorical dependency
+            </a>
+            <span>Z. Xiao, L. Shou, X. Zhang, J. Wu, M. Gong, D. Jiang. Findings of EMNLP 2023.</span>
+          </li>
+          <li>
+            <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:9ZlFYXVOiuMC">
+              Policy-Invisible Violations in LLM-Based Agents
+            </a>
+            <span>J. Wu, M. Gong. arXiv 2026.</span>
+          </li>
+        </ol>
       </section>
 
-      <section class="contact-section" id="contact" aria-labelledby="contact-title">
-        <div class="contact-inner">
-          <p class="section-kicker">Contact</p>
-          <h2 id="contact-title">Open to algorithmic systems, AI tooling, and research collaborations.</h2>
-          <div class="contact-actions">
-            <a class="button primary" href="mailto:hello@example.com">hello@example.com</a>
-            <a class="button secondary" href="https://github.com/jwu10">GitHub</a>
-          </div>
+      <section class="section" id="links" aria-labelledby="links-title">
+        <h2 id="links-title">Links</h2>
+        <p>
+          I keep longer-form technical articles on this site and maintain the publication list on
+          Google Scholar.
+        </p>
+        <div class="link-row">
+          <a href="https://scholar.google.ca/citations?user=ukg-yzsAAAAJ">Google Scholar</a>
+          <a href="https://www.linkedin.com/in/jiewu-ecnu/">LinkedIn</a>
+          <a href="https://github.com/jiewuecnu-wq">GitHub</a>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <p>&copy; <span data-year></span> Jie Wu. Built for GitHub Pages.</p>
+      <p>&copy; <span data-year></span> Jie Wu.</p>
       <a href="#top">Back to top</a>
     </footer>
 
