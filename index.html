@@ -14,7 +14,7 @@
     >
     <meta property="og:type" content="website">
     <title>Jie Wu</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260619-research-3">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -41,17 +41,34 @@
 
     <main class="page" id="main">
       <section class="intro" id="top" aria-labelledby="intro-title">
-        <p class="eyebrow">Search · Knowledge Graphs · AI Agents</p>
-        <h1 id="intro-title">Jie Wu</h1>
-        <p class="lede">
-          I work on search and query understanding systems, with a focus on entity linking,
-          knowledge graphs, question answering, retrieval-augmented models, and agentic AI.
-        </p>
-        <p class="affiliation">Microsoft MAI Search & Distribution - CoreSearch</p>
-        <div class="link-row" aria-label="Profile links">
-          <a href="https://scholar.google.ca/citations?user=ukg-yzsAAAAJ">Google Scholar</a>
-          <a href="https://www.linkedin.com/in/jiewu-ecnu/">LinkedIn</a>
-          <a href="https://github.com/jiewuecnu-wq">GitHub</a>
+        <div class="intro-main">
+          <p class="eyebrow">Search · Knowledge Graphs · AI Agents</p>
+          <h1 id="intro-title">Jie Wu</h1>
+          <p class="lede">
+            I work on search and query understanding systems, with a focus on entity linking,
+            knowledge graphs, question answering, retrieval-augmented models, and agentic AI.
+          </p>
+          <p class="affiliation">Microsoft MAI Search & Distribution - CoreSearch</p>
+          <div class="link-row" aria-label="Profile links">
+            <a href="https://scholar.google.ca/citations?user=ukg-yzsAAAAJ">Google Scholar</a>
+            <a href="https://www.linkedin.com/in/jiewu-ecnu/">LinkedIn</a>
+            <a href="https://github.com/jiewuecnu-wq">GitHub</a>
+          </div>
+        </div>
+
+        <div class="profile-summary" aria-label="Profile summary">
+          <div>
+            <span>Focus</span>
+            <strong>Query Understanding</strong>
+          </div>
+          <div>
+            <span>Methods</span>
+            <strong>EL · RAG · Agents</strong>
+          </div>
+          <div>
+            <span>Topics</span>
+            <strong>Web Search · KG · QA</strong>
+          </div>
         </div>
       </section>
 
@@ -79,66 +96,131 @@
           <a href="articles/entity-linking-for-ai-agents.html">Latest article</a>
         </div>
 
-        <div class="note-list">
+        <div class="article-list">
           <a class="note-item" href="articles/entity-linking-for-ai-agents.html">
-            <span>Article</span>
-            <strong>Entity Linking for AI Agents</strong>
-            <p>
-              Why the goal of entity linking changes from stable keys for pipelines to
-              contextual grounding for agent decisions.
-            </p>
+            <span class="item-meta">Article</span>
+            <span class="item-title">Entity Linking for AI Agents</span>
+            <span class="item-desc">From stable keys for pipelines to contextual grounding for agent decisions.</span>
           </a>
           <div class="note-item muted">
-            <span>Draft</span>
-            <strong>Evaluating retrieval systems beyond top-k recall</strong>
-            <p>Measuring retrieval quality when the downstream system is generative.</p>
+            <span class="item-meta">Draft</span>
+            <span class="item-title">Evaluating retrieval systems beyond top-k recall</span>
+            <span class="item-desc">Measuring retrieval quality when the downstream system is generative.</span>
           </div>
           <div class="note-item muted">
-            <span>Draft</span>
-            <strong>What agent traces reveal about planning quality</strong>
-            <p>How tool paths, retries, and wrong branches expose weaknesses in agent planning.</p>
+            <span class="item-meta">Draft</span>
+            <span class="item-title">What agent traces reveal about planning quality</span>
+            <span class="item-desc">How tool paths, retries, and wrong branches expose weaknesses in agent planning.</span>
           </div>
         </div>
       </section>
 
       <section class="section" id="publications" aria-labelledby="publications-title">
         <div class="section-heading">
-          <h2 id="publications-title">Selected Publications</h2>
+          <h2 id="publications-title">Publications</h2>
           <a href="https://scholar.google.ca/citations?user=ukg-yzsAAAAJ">All on Scholar</a>
         </div>
 
-        <ol class="publication-list">
-          <li>
+        <div class="publication-list">
+          <article class="publication-item">
+            <time>2026</time>
             <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:UebtZRa9Y70C">
-              Instructed language models with retrievers are powerful entity linkers
+              Beyond Single-Agent Alignment: Preventing Context-Fragmented Violations in Multi-Agent Systems
             </a>
-            <span>Z. Xiao, M. Gong, J. Wu, X. Zhang, L. Shou, D. Jiang. EMNLP 2023.</span>
-          </li>
-          <li>
+            <span>J. Wu, M. Gong. arXiv preprint arXiv:2604.22879.</span>
+          </article>
+          <article class="publication-item">
+            <time>2026</time>
+            <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:9ZlFYXVOiuMC">
+              Policy-Invisible Violations in LLM-Based Agents
+            </a>
+            <span>J. Wu, M. Gong. arXiv preprint arXiv:2604.12177.</span>
+          </article>
+          <article class="publication-item">
+            <time>2025</time>
+            <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:roLk4NBRz8UC">
+              Quantifying the robustness of retrieval-augmented language models against spurious features in grounding data
+            </a>
+            <span>S. Yang, J. Wu, W. Ding, N. Wu, S. Liang, M. Gong, H. Zhang, D. Zhang. arXiv preprint arXiv:2503.05587.</span>
+          </article>
+          <article class="publication-item">
+            <time>2024</time>
             <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:mVmsd5A6BfQC">
               Grounding language models for visual entity recognition
             </a>
             <span>Z. Xiao, M. Gong, P. Cascante-Bonilla, X. Zhang, J. Wu, V. Ordonez. ECCV 2024.</span>
-          </li>
-          <li>
-            <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:roLk4NBRz8UC">
-              Quantifying the robustness of retrieval-augmented language models against spurious features in grounding data
+          </article>
+          <article class="publication-item">
+            <time>2024</time>
+            <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:hqOjcs7Dif8C">
+              Step-back profiling: Distilling user history for personalized scientific writing
             </a>
-            <span>S. Yang, J. Wu, W. Ding, N. Wu, S. Liang, M. Gong, H. Zhang, D. Zhang. arXiv 2025.</span>
-          </li>
-          <li>
+            <span>X. Tang, X. Zhang, Y. Shao, J. Wu, Y. Zhao, A. Cohan, M. Gong, D. Zhang, et al. IJCAI 2024 Workshop on AI4Research.</span>
+          </article>
+          <article class="publication-item">
+            <time>2023</time>
+            <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:UebtZRa9Y70C">
+              Instructed language models with retrievers are powerful entity linkers
+            </a>
+            <span>Z. Xiao, M. Gong, J. Wu, X. Zhang, L. Shou, D. Jiang. EMNLP 2023.</span>
+          </article>
+          <article class="publication-item">
+            <time>2023</time>
             <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:Se3iqnhoufwC">
               Coherent entity disambiguation via modeling topic and categorical dependency
             </a>
             <span>Z. Xiao, L. Shou, X. Zhang, J. Wu, M. Gong, D. Jiang. Findings of EMNLP 2023.</span>
-          </li>
-          <li>
-            <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:9ZlFYXVOiuMC">
-              Policy-Invisible Violations in LLM-Based Agents
+          </article>
+          <article class="publication-item">
+            <time>2018</time>
+            <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:4DMP91E08xMC">
+              RFID based motion direction estimation in gate systems
             </a>
-            <span>J. Wu, M. Gong. arXiv 2026.</span>
-          </li>
-        </ol>
+            <span>W. Jie, Z. Minghua, X. Bo, H. Wei. IEEE CSCWD 2018.</span>
+          </article>
+          <article class="publication-item">
+            <time>2018</time>
+            <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:Wp0gIr-vW9MC">
+              The improved fingerprint-based indoor localization with rfid/pdr/mm technologies
+            </a>
+            <span>J. Wu, M. Zhu, B. Xiao, Y. Qiu. IEEE ICPADS 2018.</span>
+          </article>
+          <article class="publication-item">
+            <time>2018</time>
+            <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:7PzlFSSx8tAC">
+              Delving deep into multiscale pedestrian detection via single scale feature maps
+            </a>
+            <span>X. Fu, R. Yu, W. Zhang, J. Wu, S. Shao. Sensors 18(4), 1063.</span>
+          </article>
+          <article class="publication-item">
+            <time>2018</time>
+            <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:qxL8FJ1GzNcC">
+              Motion direction estimation based on active RFID with changing environment
+            </a>
+            <span>W. Jie, Z. Minghua, H. Wei. International Journal of Electronics 105(5), 882-891.</span>
+          </article>
+          <article class="publication-item">
+            <time>2018</time>
+            <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:aqlVkmm33-oC">
+              Graph-based indoor localization with the fusion of PDR and RFID technologies
+            </a>
+            <span>J. Wu, M. Zhu, B. Xiao, Y. Qiu. ICA3PP 2018.</span>
+          </article>
+          <article class="publication-item">
+            <time>2018</time>
+            <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:dhFuZR0502QC">
+              Inertial measurement unit-aided dual-frequency radio frequency identification localization in line-of-sight and non-line-of-sight hybrid environment
+            </a>
+            <span>J. Wu, M. Zhu, B. Xiao, W. He. International Journal of Distributed Sensor Networks 14(3), 1550147718762033.</span>
+          </article>
+          <article class="publication-item">
+            <time>2017</time>
+            <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=ukg-yzsAAAAJ&citation_for_view=ukg-yzsAAAAJ:4TOpqqG69KYC">
+              MAC-ILoc: Multiple antennas cooperation based indoor localization using Cylindrical Antenna Arrays
+            </a>
+            <span>W. Jie, Z. Minghua, X. Bo. CollaborateCom 2017.</span>
+          </article>
+        </div>
       </section>
 
       <section class="section" id="links" aria-labelledby="links-title">
